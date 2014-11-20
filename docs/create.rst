@@ -3,7 +3,7 @@ Creating a gist
 
 .. warning::
 
-	user must be authenticated 
+	user must be authenticated
 
 .. note::
 
@@ -33,15 +33,23 @@ Creating a Gist with *required* argument only ``create(params)``
 ----------------------------------------------------------------
 
 .. code-block:: python
-	
+
 	# create a gist with defaut name(gist:gistID, provided by github)
 	GHgist.create(content='_CONTENT_GOES_HERE')
+
+Creating a Gist with multiple files
+-----------------------------------------------------
+
+.. code-block:: python
+
+GHgist = Multigist(username='username', api_token='api_token')
+GHgist.create(description='_ANY_DESCRIPTION', public=0, files={'file1':'_CONTENT_GOES_HERE','file2':'_CONTENT_GOES_HERE'})
 
 Other Docs
 ^^^^^^^^^^
 
 * :doc:`index`
 * :doc:`manage`
-* :doc:`actions` 
+* :doc:`actions`
 * :doc:`searching`
 * :doc:`comments`
